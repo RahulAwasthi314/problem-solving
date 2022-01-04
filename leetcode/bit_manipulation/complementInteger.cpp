@@ -14,6 +14,9 @@ using namespace std;
 int bitwiseComplement(int n){
     int res = 0;
     stack<int> a;
+    
+    if (n == 0) return 1;
+
     while (n) {
         a.push((n & 1) ^ 1);
         n >>= 1;
@@ -28,7 +31,7 @@ int bitwiseComplement(int n){
 
 }
 int main() {
-    int n = bitwiseComplement(5);
+    int n = bitwiseComplement(0);
     cout << n;
     return 0;
 
