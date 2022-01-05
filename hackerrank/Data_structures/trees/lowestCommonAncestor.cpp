@@ -1,5 +1,5 @@
 /**
- * @file lcs.cpp
+ * @file lowestCommonAncestor.cpp
  * @author Rahul Awasthi (awasthir@pm.me)
  * 
  * @brief 
