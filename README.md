@@ -21,14 +21,16 @@ Sequencially we will continue with the different approaches we will apply in the
 
 ## Data Structure topics that we will cover -->
 
-1. Array
-2. String
-3. Linked List
-4. Tree
-    - Binary Tree
-    - BST
-    - Balanced BST
-5. Graph
+Array
+String
+Two pointers
+Bit Manipulation
+Stack
+Queue
+Heap
+Linked Lists
+Trees
+Graphs
 
 
 ## Algorithms that we get to know in this journey -->
