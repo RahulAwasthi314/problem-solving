@@ -50,6 +50,9 @@ Graphs
 ## The structure and location of program we will follow to solve a problem -->
 
 FolderName  -   PlateformName
+
+Category    -   Applicable category 
+
 FileName    -   The name of problem
 
 
