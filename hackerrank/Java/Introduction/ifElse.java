@@ -4,7 +4,7 @@
  * 
  * @brief 
  * Try out the problem here:
- * https://leetcode.com/problems/linked-list-random-node/
+ * https://www.hackerrank.com/challenges/java-if-else/
  *
  */
 

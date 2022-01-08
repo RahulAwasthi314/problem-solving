@@ -9,7 +9,7 @@ Sequencially we will continue with the different approaches we will apply in the
 
 1. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/hackerrank.svg" /> [Hackerrank](https://hackerrank.com)
 2. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/leetcode.svg" /> [Leetcode](https://leetcode.com)
-3. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/codechef.svg" /> [Codechef]("https://codechef.com")
+3. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/codechef.svg" /> [Codechef](https://codechef.com)
 
 
 <br/>
@@ -20,6 +20,7 @@ Sequencially we will continue with the different approaches we will apply in the
 1. [C/C++](https://www.cplusplus.com/)
 2. [Python](https://www.python.org)
 3. [SQL](https://www.sqlite.org/)
+4. [Java](https://www.java.com/)
 
 <br/>
 
@@ -39,7 +40,7 @@ Sequencially we will continue with the different approaches we will apply in the
 <br/>
 
 ## Algorithms that we get to know in this journey -->
----
+
     1. Searching
         - Linear Search
         - Binary Search
@@ -55,7 +56,6 @@ Sequencially we will continue with the different approaches we will apply in the
 
 
 ## Program structure
----
 
 1. Title :     problem statement or link to the problem statement
 2. Approaches:
