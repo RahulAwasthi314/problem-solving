@@ -8,8 +8,9 @@ Sequencially we will continue with the different approaches we will apply in the
 ## Plateforms that we will use to solve problems -->
 
 1. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/hackerrank.svg" /> [Hackerrank](https://hackerrank.com)
-2. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/leetcode.svg" />  [Leetcode](https://leetcode.com)
+2. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/leetcode.svg" /> [Leetcode](https://leetcode.com)
 3. <img height="16" width="16" src="https://unpkg.com/simple-icons@v6/icons/codechef.svg" /> [Codechef]("https://codechef.com")
+
 
 <br/>
 
