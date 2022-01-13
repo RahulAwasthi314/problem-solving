@@ -1,5 +1,5 @@
 /**
- * @file Stdin.java
+ * @file Stdout.java
  * @author Rahul Awasthi (awasthir@pm.me)
  * 
  * @brief 

@@ -1,6 +1,6 @@
 /**
- * @file HellooWorld.
- * @brief Rahul Awasthi (awasthir@pm.me)
+ * @file outputFormat.java
+ * @author Rahul Awasthi (awasthir@pm.me)
  * 
  * @brief  
  * Try out the problem here:
