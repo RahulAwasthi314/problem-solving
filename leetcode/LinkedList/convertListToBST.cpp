@@ -30,6 +30,7 @@
  */
 class Solution {
 public:
+// brute force: tree havin height O(n)
     TreeNode* sortedListToBST(ListNode* head) {
         TreeNode* root = new TreeNode(0);
         TreeNode* t = root;
@@ -42,4 +43,6 @@ public:
         }
         return root->right;
     }
+
+    // maintain the height of BST
 };
