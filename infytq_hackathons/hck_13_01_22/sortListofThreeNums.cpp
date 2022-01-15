@@ -1,3 +1,15 @@
+/**
+ * @file sortListofThreeNums.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ * 
+ * @brief 
+ * problem statement:-
+ * Sort an given array of N elements of 0's, 1's and 2's in linear time complexity.
+ * For example, if the given arrays is {1, 0, 2, 0, 0, 1,2,1}, it should be changed to 
+ * {0, 0, 0, 1, 1, 1, 2, 2}.
+ * 
+ */
+
 #include <iostream>
 #include <vector>
 using namespace std;

@@ -1,3 +1,24 @@
+/**
+ * @file rotateMatrix.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ * 
+ * @brief
+ * problem statement-
+ * Given a square matrix mat[][] of size N x N. The task is to rotate it by 90 degrees in anti- clockwise direction without using any extra space.
+ * 
+ * Input: N=3
+ * 1 2 3
+ * 4 5 6
+ * 7 8 9
+ * 
+ * Output:
+ * 3 6 9
+ * 2 5 8
+ * 1 4 7 
+ * 
+ */
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
