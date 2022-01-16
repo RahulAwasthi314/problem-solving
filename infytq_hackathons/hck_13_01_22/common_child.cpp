@@ -43,32 +43,32 @@ int commonChild_dp(string s1, string s2) {
         return false;
     }
     // create a 2D matrix of size m + 1
-    vector<vector<int>> arr(m + 1, vector<int> (m + 1, 0));
+    vector<vector<int>> dp(n+1, vector<int> (m+1, 0));
 
-    // initialize the forst row as 0
+    // initialize the first row as 0
     // for (auto i : arr) {
     //     cout << i.size() << " ";
     //     // arr[0][i] = 0;
     // }
     // fill the values in the matrix
-    for (int i = 1; i < m; i++) {
-        for (int j = 1; j < m; j++) {
-            if (arr[i] == arr[j]) {
-                arr[i][j] = arr[i-1][j-1] + 1;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (s1[i] == s2[j]) {
+                dp[i+1][j+1] = dp[i][j] + 1;
             }
             else {
-                arr[i][j] = max(arr[i-1][j], arr[i][j-1]);
+                dp[i+1][j+1] = max(dp[i][j+1], dp[i+1][j]);
             }
-            cout << arr[i][j] << " ";
+            cout << dp[i+1][j+1] << " ";
         }
         cout << endl;
     }
-    return arr[n-1][m-1];
+    return dp[n][m];
 }
 int main() {
     string s1 = "SHINCHAN";
     string s2 = "NOHARAAA";
-    // cout << "The length of longest substring: " <<;
-    commonChild_dp(s1, s2);
+    int n = commonChild_dp(s1, s2);
+    cout << "The length of longest substring: " << n;
     return 0;
 }
