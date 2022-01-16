@@ -1,5 +1,5 @@
 """
-  @file numberLineJumps.cpp
+  @file divisibleSumPairs.py
   @author Rahul Awasthi (awasthir@pm.me)
   
   @brief 
