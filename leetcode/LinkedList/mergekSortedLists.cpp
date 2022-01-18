@@ -104,3 +104,38 @@ public:
         return result->next;
     }
 };
+
+// work on further approaches possible 
+
+// using two sorted lists approach solve every time for two lists
+
+
+
+
+
+// take all values push them into stack, sort them and insert them into new list. return list
+// time complexity: O(n + n*logn) space required: O(n)
+
+class Solution3 {
+public:
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        ListNode* head = new ListNode(-1);
+        ListNode* ptr = head;
+        
+        vector<int> s;
+        
+        if (lists.size() == 0) return nullptr;
+        for (int i = 0; i < lists.size(); i++) {
+            while (lists[i] != nullptr) {
+                s.push_back(lists[i]->val);
+                lists[i] = lists[i]->next;
+            }
+        }
+        sort(s.begin(), s.end());
+        for (int i = 0; i < s.size(); i++) {
+            ptr->next = new ListNode(s[i]);
+            ptr = ptr->next;
+        }
+        return head->next;
+    }
+};
