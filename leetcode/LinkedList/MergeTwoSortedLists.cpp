@@ -115,3 +115,5 @@ public:
         
     }
 };
+
+// use divide and conquer approach to solve it.
