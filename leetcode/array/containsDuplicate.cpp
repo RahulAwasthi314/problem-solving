@@ -64,6 +64,22 @@ private:
         }
         return false;
     }
+
+    // by making a unordered map : Hash Table implementation
+    // improving the space complexity from previous solution.
+    // Time Complexity  : O(n)
+    // Space Complexity : O(k) k : number of distinct elements present in array
+    bool setOfVisited(vector<int>& nums) {
+        unordered_set<int> visited;
+        visited.insert(nums[0]);
+
+        // O(n) time
+        for (int i = 1; i < nums.size(); i++) {
+            if (visited.find(nums[i]) != visited.end()) return true;    // O(1) 
+            visited.insert(nums[i]);                                    // O(1)
+        }
+        return false;
+    }
     
 public:
     bool containsDuplicate(vector<int>& nums) {
