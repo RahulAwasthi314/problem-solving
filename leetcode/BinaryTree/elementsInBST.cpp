@@ -24,12 +24,14 @@ class Solution {
     vector<int> res;
 
     vector<int> bruteForce(TreeNode* root1, TreeNode* root2) {
+        // Time Complexity: O(n) + O(m) + O(m+n log m+n)
         pushNodes(root1);
         pushNodes(root2);
         sort(res.begin(), res.end());
         return res;
     }
 
+    // O(n)
     void pushNodes(TreeNode* root) {
         // base case
         if (!root) return;

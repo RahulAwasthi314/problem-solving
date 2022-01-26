@@ -18,6 +18,7 @@ vector<int> getNum(int num) {
 // num : number of any base from which we need to convert it to decimal
 // base: the current base of number
 int toDec(int num, int base) {
+    if (base == 10) return num;
     int power = 0;
     int res = 0;
     vector<int> s = getNum(num);
@@ -38,4 +39,29 @@ int main () {
     cout << toDec(num, base);
     cout << endl;
     return 0;
+}
+
+
+
+vector<int> getNum(int num) {
+    vector<int> s;
+    while (num != 0) {
+        s.push_back(num % 10);
+        num /= 10;
+    }
+    return s;
+}
+int toDec(int num, int base) {
+    if (base == 10) return num;
+    int power = 0;
+    int res = 0;
+    vector<int> s = getNum(num);
+    for (auto i : s) {
+        cout << i << " ";
+    }
+    cout<< endl;
+    for (int i = 0; i < s.size(); i++) {
+        res += s[i] * pow(base, i);
+    }
+    return res;
 }
