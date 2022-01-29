@@ -47,3 +47,34 @@ public:
         return helper(root, 0);
     }
 };
+
+
+// second approach
+// time: O(2 ^ n)   space: O(sizeof(32 bit int))
+// no doubt above approach is more feasible, optimal and less instruction taking
+// consider above one even though you have created below code by yourself.
+class Solution {
+    vector<int> res;
+    
+    void findNums(TreeNode* root, int num) {
+        if (!root) return;
+        if (!root->left and !root->right) {
+            num <<= 1;
+            num |= root->val;
+            res.push_back(num);
+            return;
+        }
+        num <<= 1;
+        num |= root->val;
+        findNums(root->left, num);
+        findNums(root->right, num);
+        
+    }
+    
+public:
+    int sumRootToLeaf(TreeNode* root) {
+        int n = 0;
+        findNums(root, 0);
+        return accumulate(res.begin(), res.end(), 0);
+    }
+};
