@@ -44,6 +44,23 @@ int nonDivisibleSubset(int k, vector<int> s) {
     return count;
 }
 
+
+int nonDivisibleSubset(int k, vector<int> s) {
+    int ar[k];
+    for (int& i : ar) i = 0;
+
+    for (int i : s) ar[i%k]++;
+    int ans = min(ar[0], 1);
+    
+    for (int j = 1; j <= k/2; j++) {
+        if (j != k-j) ans += max(ar[j], ar[k-j]);
+    }
+    // if k is even, the middle position value is not evaluated
+    // for evaluating that middle position
+    if (k%2==0) ans+=min(ar[k/2], 1);
+    return ans;
+}
+
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
