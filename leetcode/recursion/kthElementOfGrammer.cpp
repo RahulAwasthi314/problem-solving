@@ -10,6 +10,17 @@
 
 class Solution {
 private:
+
+    int kthGrammar2(int n, int k) {
+        if (n == 1 and k == 1) return 0;
+        
+        int length = pow(2, n-1);
+        if (k > length/2) return !kthGrammar2(n-1, k-length/2);
+        if (k <= length/2) return kthGrammar2(n-1, k);
+        return -1;
+    }
+
+
     int solve(int n, int k) {
         // base step
         // if  n = 1 and k = 1
@@ -17,7 +28,7 @@ private:
         if (n == 1 and k == 1) return 0;
         
         // induction step
-        // calculate mid
+        // calculate mid of previous row
         int mid = pow(2, n-2);
         
         // hypothesis step
