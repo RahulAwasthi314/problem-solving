@@ -4,7 +4,7 @@
  * 
  * @brief 
  * try out the problem here:
- * 
+ * https://www.hackerrank.com/challenges/jesse-and-cookies/
  * 
  */
 
