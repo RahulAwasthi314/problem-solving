@@ -4,7 +4,7 @@
  * 
  * @brief 
  * problem link:
- * https://www.hackerrank.com/contests/h-cs3c-feb16/challenges/pairs
+ * https://www.hackerrank.com/challenges/pairs/
  * 
  */
 

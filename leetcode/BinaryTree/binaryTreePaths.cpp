@@ -1,11 +1,11 @@
 /**
  * @file binaryTreePaths.cpp
  * @author Rahul Awasthi (awasthir@pm.me)
- * 
- * @brief 
+ *
+ * @brief
  * try out the problem here:
  * https://leetcode.com/problems/binary-tree-paths/
- * 
+ *
  */
 
 /**
@@ -22,7 +22,6 @@
 
 class Solution {
     vector<string> res;
-    
     void allPaths(TreeNode* root, string s) {
         // base step
         if (!root) return;
@@ -33,7 +32,6 @@ class Solution {
         if (!root->left and !root->right) {
             res.push_back(s);
         }
-        
         // inductive step
         allPaths(root->left, s);
         allPaths(root->right, s);

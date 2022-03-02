@@ -36,3 +36,13 @@ public:
         return ret_max(root);
     }
 };
+
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if (!root) return 0;
+        int left = root->left ? maxDepth(root->left) : 0;
+        int right = root->right ? maxDepth(root->right) : 0;
+        return 1 + max(left, right);
+    }
+};

@@ -18,4 +18,8 @@ public:
         }
         return count;
     }
+    // built_in method usage
+    int hammingWeight2(uint32_t n) {
+        return __builtin_popcount(n);
+    }
 };
