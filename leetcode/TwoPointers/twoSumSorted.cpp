@@ -20,8 +20,22 @@ class Solution {
         }
         return {-1, -1};
     }
+
+    vector<int> find(vector<int>& nums, int a, int b, int target) {
+        int sum = nums[a]+nums[b];
+        
+        if (sum == target) {
+            return {a+1, b+1};
+        } else if (sum < target) {
+            return find(nums, a+1, b, target);
+        } else {
+            return find(nums, a, b-1, target);
+        }
+    }
+    
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        
+        int i = 0, j = numbers.size()-1;
+        return find(numbers, i, j, target);
     }
 };
