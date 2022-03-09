@@ -1,3 +1,13 @@
+/**
+ * @file squareofSortedArray.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ * 
+ * @brief 
+ * try out the problem here:
+ * https://leetcode.com/problems/squares-of-a-sorted-array/
+ * 
+ */
+
 class Solution {
     
     vector<int> twoPointers(vector<int>& nums) {
