@@ -54,3 +54,48 @@ public:
         return freMapMethod(s, t);
     }
 };
+
+// new solution design technique without proper knowledge of solution
+// NOTE: IMPROVMENT REQUIRED
+class Solution {
+    // mutation of the input variable
+    bool bf(string& s, string& t) {
+        sort(s.begin(), s.end());   // O(n logn)
+        sort(s.begin(), t.end());   // O(n logn)
+        return s == t;              // O(n)
+    }
+    
+    bool hashtable(string& s, string& t) {
+        unordered_map<char, int> smap;
+        unordered_map<char, int> tmap;
+        for (char ch : s) smap[ch]++;
+        for (char ch : t) tmap[ch]++;
+        if (smap.size() != tmap.size()) return false;
+        for (auto it : smap) {
+            auto it2 = tmap.find(it.first);
+            if(it2 == tmap.end()) {
+                return false;
+            } else if (it2->second != it.second) {
+                return false;
+            }
+        }
+        return true;
+    }
+public:
+    bool isAnagram(string s, string t) {
+        return hashtable(s, t);
+    }
+};
+
+/**
+"anagram"
+"nagaram"
+"abcd"
+"abc"
+"aaaaa"
+"aaabb"
+"a"
+"b"
+"a"
+"a"
+*/
