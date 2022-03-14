@@ -7,10 +7,9 @@
  * https://leetcode.com/problems/transpose-matrix/
  * 
  */
-
 class Solution {
-public:
-    vector<vector<int>> transpose(vector<vector<int>>& matrix) {
+    // Time: O(n^2) Space: O(n^2)
+    vector<vector<int>> transposeBF(vector<vector<int>>& matrix) {
         int m = matrix.size();
         int n = matrix[0].size();
         vector<vector<int>> vec (n, vector<int> (m, 0));
@@ -20,5 +19,10 @@ public:
             }
         }
         return vec;
+    }
+    
+public:
+    vector<vector<int>> transpose(vector<vector<int>>& matrix) {
+        return transposeBF(matrix);
     }
 };
