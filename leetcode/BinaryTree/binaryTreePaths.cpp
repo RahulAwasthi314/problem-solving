@@ -43,3 +43,29 @@ public:
         return res;
     }
 };
+
+
+class Solution2 {
+    void bt(TreeNode* root, string& currPaths, vector<string>& allPaths) {
+        if (!root) {
+            return;
+        }
+        
+        if (root and !root->left and !root->right) {
+            string ss = to_string(root->val);
+            allPaths.push_back(currPaths + ss);
+            return;
+        }
+        string s = currPaths + to_string(root->val) + "->";
+        if (root->left) bt(root->left, s, allPaths);
+        if (root->right) bt(root->right, s, allPaths);
+    }
+    
+public:
+    vector<string> binaryTreePaths(TreeNode* root) {
+        vector<string> allPaths;
+        string currPaths;
+        bt(root, currPaths, allPaths);
+        return allPaths;
+    }
+};
