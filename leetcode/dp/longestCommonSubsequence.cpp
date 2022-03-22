@@ -1,3 +1,13 @@
+/**
+ * @file longestCommonSubsequence.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ * 
+ * @brief 
+ * try out the problem here:
+ * https://leetcode.com/problems/longest-common-subsequence/
+ * 
+ */
+
 class Solution {
 
     // recursive
