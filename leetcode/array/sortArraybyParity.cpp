@@ -1,5 +1,5 @@
 /**
- * @file containsDuplicate.cpp
+ * @file sortArrayByParity.cpp
  * @author Rahul Awasthi (awasthir@pm.me)
  *
  * @brief
