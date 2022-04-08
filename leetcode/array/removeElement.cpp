@@ -1,11 +1,11 @@
 /**
  * @file removeElement.cpp
  * @author Rahul Awasthi (awasthir@pm.me)
- * 
- * @brief 
+ *
+ * @brief
  * try out the probleme here:
- 
- * 
+
+ *
  */
 
 class Solution {
@@ -30,6 +30,23 @@ public:
             }
         }
         return i;
+    }
+
+    int removeElement2(vector<int>& nums, int val) {
+        int i = 0, j = nums.size()-1;
+        while (i < j) {
+            if (nums[i] == val and nums[j] == val) {
+                j--;
+            } else if (nums[i] != val and nums[j] == val) {
+                i++; j--;
+            } else if (nums[i] == val and nums[j] != val) {
+                swap(nums[i], nums[j]);
+                i++; j--;
+            } else {
+                i++;
+            }
+        }
+        return j+1;
     }
 };
 
