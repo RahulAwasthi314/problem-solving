@@ -1,8 +1,8 @@
 /**
  * @file LinkedListRandomNode.cpp
  * @author Rahul Awasthi (awasthir@pm.me)
- * 
- * @brief 
+ *
+ * @brief
  * Try out the problem here:
  * https://leetcode.com/problems/linked-list-random-node/
  *
@@ -22,7 +22,7 @@
 
 // brute force approach
 class Solution {
-private:    
+private:
     ListNode* ptr;
     int size = 0;
 public:
@@ -34,7 +34,7 @@ public:
             temp = temp->next;
         }
     }
-    
+
     int getRandom() {
         ListNode* temp = ptr;
         int random = rand() % size;
@@ -43,8 +43,33 @@ public:
     }
 };
 
-// solve follow up approaches here
-// ...
+
+// reservoir sampling method
+// by treating it as the running time algo
+// calculating probability based on running sum
+class Solution2 {
+    ListNode* list;
+public:
+    Solution2(ListNode* head) {
+        list = head;
+    }
+
+    int getRandom() {
+        ListNode* head = list;
+        // if list contains only one node
+        // the probablity of accessing that one is = 1.
+        int r = head->val;
+        int n = 1;
+        head = head->next;
+        while (head != nullptr) {
+            // count the randomness based on the length of n.
+            if (rand() % (n+1) == 0) r = head->val;
+            head = head->next;
+            n++;
+        }
+        return r;
+    }
+};
 
 
 /**
