@@ -1,3 +1,13 @@
+/**
+ * @file shuffleAnArray.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ *
+ * @brief
+ * Try out the problem here:
+ * https://leetcode.com/problems/shuffle-an-array/
+ *
+ */
+
 class Solution {
     vector<int> arr;    //original
     vector<int> brr;
