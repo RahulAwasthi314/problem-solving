@@ -1,4 +1,13 @@
 /**
+ * @file binaryTreeToGreaterTree.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ *
+ * @brief
+ * try out the problem here:
+ * https://leetcode.com/problems/convert-bst-to-greater-tree/
+ */
+
+/**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -20,7 +29,7 @@ class Solution {
         inorder(root->right);
         return arr;
     }
-    
+
     void placeGreater(TreeNode* root) {
         if (!root) return;
         placeGreater(root->left);
@@ -41,6 +50,34 @@ public:
             preSumMap[arr[i]] = preSum[i];
         }
         placeGreater(root);
+        return root;
+    }
+};
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution2 {
+    int ans = 0;
+    void prototype(TreeNode* root) {
+        if (!root) return;
+        prototype(root->right);
+        ans += root->val;
+        root->val = ans;
+        prototype(root->left);
+    }
+public:
+    TreeNode* convertBST(TreeNode* root) {
+        if (!root) return nullptr;
+        prototype(root);
         return root;
     }
 };
