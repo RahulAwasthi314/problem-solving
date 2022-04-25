@@ -1,0 +1,16 @@
+/**
+ * @file addTwoInteger.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ *
+ * @brief
+ * try out the problem here:
+ * https://leetcode.com/problems/add-two-integers/
+ *
+ */
+
+class Solution {
+public:
+    int sum(int num1, int num2) {
+       return num1 + num2;
+    }
+};
