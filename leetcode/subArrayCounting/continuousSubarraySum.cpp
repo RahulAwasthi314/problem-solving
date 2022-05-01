@@ -1,3 +1,13 @@
+/**
+ * @file contiguousSubArraySum.cpp
+ * @author Rahul Awasthi (awasthir@pm.me)
+ *
+ * @brief
+ * try out the problem here:
+ * https://leetcode.com/problems/continuous-subarray-sum/
+ *
+ */
+
 class Solution {
     // time: O(n^3) space: O(n^2)
     int bruteforce1(vector<int>& nums, int k) {
